@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wordcounterreadingtime.krishaiworks.com/sitemap.xml
