@@ -482,45 +482,141 @@ export default function Home() {
 
       {/* Footer */}
 
-      <footer className="relative z-10 border-t border-white/5 px-5 py-10">
+<footer className="relative z-10 border-t border-white/5 px-5 py-10">
 
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-7 sm:flex-row">
+  {/* Related Tools */}
+  <div className="mx-auto max-w-6xl">
 
-          <div className="flex items-center gap-3">
+    <div className="mb-8 text-center">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-400/70">
+        Explore More
+      </p>
 
-            <img
-              src="/logo.png"
-              alt="KrishAIWorks Logo"
-              className="h-12 w-12 rounded-full border border-lime-400/20 object-cover"
-            />
+      <h3 className="mt-2 text-xl font-semibold text-white">
+        More Writing & Productivity Tools
+      </h3>
 
-            <div>
-              <p className="font-semibold text-white">
-                KrishAIWorks
-              </p>
+      <p className="mt-2 text-sm text-zinc-500">
+        Explore more useful tools from KrishAIWorks.
+      </p>
+    </div>
 
-              <p className="mt-1 text-xs text-zinc-600">
-                AI Solutions That Work
-              </p>
-            </div>
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
-          </div>
-
-          <a
-            href="https://instagram.com/KrishAIWorks"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-zinc-500 transition hover:text-lime-400"
-          >
-            Instagram · @KrishAIWorks
-          </a>
-
-          <p className="text-xs text-zinc-700">
-            © 2026 KrishAIWorks
-          </p>
-
+      {/* AI Blog Generator */}
+      <a
+        href="https://aibloggenerator.krishaiworks.com/"
+        className="group rounded-2xl border border-lime-400/10 bg-white/[0.02] p-5 transition hover:border-lime-400/30 hover:bg-lime-400/[0.04]"
+      >
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-lime-400/20 bg-lime-400/10 text-lg">
+          ✍️
         </div>
-      </footer>
+
+        <h4 className="font-semibold text-white transition group-hover:text-lime-400">
+          AI Blog Generator
+        </h4>
+
+        <p className="mt-2 text-xs leading-5 text-zinc-500">
+          Generate high-quality blog content with AI.
+        </p>
+      </a>
+
+      {/* AI Text Humanizer */}
+      <a
+        href="https://aitexthumanizer.krishaiworks.com/"
+        className="group rounded-2xl border border-lime-400/10 bg-white/[0.02] p-5 transition hover:border-lime-400/30 hover:bg-lime-400/[0.04]"
+      >
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-lime-400/20 bg-lime-400/10 text-lg">
+          📝
+        </div>
+
+        <h4 className="font-semibold text-white transition group-hover:text-lime-400">
+          AI Text Humanizer
+        </h4>
+
+        <p className="mt-2 text-xs leading-5 text-zinc-500">
+          Make AI-generated text sound more natural and human.
+        </p>
+      </a>
+
+      {/* AI Grammar & Writing Fixer */}
+      <a
+        href="https://aigrammarwritingfixer.krishaiworks.com/"
+        className="group rounded-2xl border border-lime-400/10 bg-white/[0.02] p-5 transition hover:border-lime-400/30 hover:bg-lime-400/[0.04]"
+      >
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-lime-400/20 bg-lime-400/10 text-lg">
+          ✨
+        </div>
+
+        <h4 className="font-semibold text-white transition group-hover:text-lime-400">
+          AI Grammar & Writing Fixer
+        </h4>
+
+        <p className="mt-2 text-xs leading-5 text-zinc-500">
+          Fix grammar, spelling, and improve your writing instantly.
+        </p>
+      </a>
+
+      {/* Markdown → HTML Converter */}
+      <a
+        href="https://markdownhtmlconverter.krishaiworks.com/"
+        className="group rounded-2xl border border-lime-400/10 bg-white/[0.02] p-5 transition hover:border-lime-400/30 hover:bg-lime-400/[0.04]"
+      >
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-lime-400/20 bg-lime-400/10 text-lg">
+          {"</>"}
+        </div>
+
+        <h4 className="font-semibold text-white transition group-hover:text-lime-400">
+          Markdown → HTML Converter
+        </h4>
+
+        <p className="mt-2 text-xs leading-5 text-zinc-500">
+          Convert Markdown content into clean HTML instantly.
+        </p>
+      </a>
+
+    </div>
+  </div>
+
+  {/* Original Footer */}
+  <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center justify-between gap-7 border-t border-white/5 pt-10 sm:flex-row">
+
+    <div className="flex items-center gap-3">
+
+      <img
+        src="/logo.png"
+        alt="KrishAIWorks Logo"
+        className="h-12 w-12 rounded-full border border-lime-400/20 object-cover"
+      />
+
+      <div>
+        <p className="font-semibold text-white">
+          KrishAIWorks
+        </p>
+
+        <p className="mt-1 text-xs text-zinc-600">
+          AI Solutions That Work
+        </p>
+      </div>
+
+    </div>
+
+    <a
+      href="https://instagram.com/KrishAIWorks"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm text-zinc-500 transition hover:text-lime-400"
+    >
+      Instagram · @KrishAIWorks
+    </a>
+
+    <p className="text-xs text-zinc-700">
+      © {new Date().getFullYear()} KrishAIWorks
+    </p>
+
+  </div>
+
+</footer>
     </main>
   );
 }
