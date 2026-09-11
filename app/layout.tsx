@@ -73,6 +73,71 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://krishaiworks.com/#organization",
+      name: "KrishAIWorks",
+      url: "https://krishaiworks.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://krishaiworks.com/logo.png",
+        width: 512,
+        height: 512,
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://krishaiworks.com/#website",
+      url: "https://krishaiworks.com",
+      name: "KrishAIWorks",
+      description:
+        "AI-powered tools, productivity utilities, automation, chatbots, websites and custom digital solutions.",
+      publisher: {
+        "@id": "https://krishaiworks.com/#organization",
+      },
+      inLanguage: "en",
+    },
+    {
+      "@type": "WebApplication",
+      "@id":
+        "https://wordcounterreadingtime.krishaiworks.com/#webapplication",
+      name: "Word Counter & Reading Time Calculator",
+      url: "https://wordcounterreadingtime.krishaiworks.com/",
+      description:
+        "Count words, characters, sentences, and paragraphs online with the free Word Counter & Reading Time Calculator by KrishAIWorks. Get an estimated reading time instantly.",
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "Any",
+      browserRequirements: "Requires a modern web browser.",
+      isPartOf: {
+        "@id": "https://krishaiworks.com/#website",
+      },
+      publisher: {
+        "@id": "https://krishaiworks.com/#organization",
+      },
+    },
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://wordcounterreadingtime.krishaiworks.com/#webpage",
+      url: "https://wordcounterreadingtime.krishaiworks.com/",
+      name: "Word Counter & Reading Time Calculator | Count Words Online",
+      description:
+        "Count words, characters, sentences, and paragraphs online with the free Word Counter & Reading Time Calculator by KrishAIWorks. Get an estimated reading time instantly.",
+      isPartOf: {
+        "@id": "https://krishaiworks.com/#website",
+      },
+      about: {
+        "@id":
+          "https://wordcounterreadingtime.krishaiworks.com/#webapplication",
+      },
+      inLanguage: "en",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -82,6 +147,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+
+        <script
+          id="word-counter-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BS6TSMM1ZR"
