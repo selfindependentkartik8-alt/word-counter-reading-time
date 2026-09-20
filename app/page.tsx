@@ -578,28 +578,31 @@ export default function Home() {
     </div>
   </div>
 
-  {/* Original Footer */}
-  <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center justify-between gap-7 border-t border-white/5 pt-10 sm:flex-row">
+ {/* Original Footer */}
 
-    <div className="flex items-center gap-3">
+<div className="mx-auto mt-10 flex max-w-6xl flex-col items-center justify-between gap-7 border-t border-white/5 pt-10 sm:flex-row">
 
-      <img
-        src="/logo.png"
-        alt="KrishAIWorks Logo"
-        className="h-12 w-12 rounded-full border border-lime-400/20 object-cover"
-      />
+  <div className="flex items-center gap-3">
 
-      <div>
-        <p className="font-semibold text-white">
-          KrishAIWorks
-        </p>
+    <img
+      src="/logo.png"
+      alt="KrishAIWorks Logo"
+      className="h-12 w-12 rounded-full border border-lime-400/20 object-cover"
+    />
 
-        <p className="mt-1 text-xs text-zinc-600">
-          AI Solutions That Work
-        </p>
-      </div>
+    <div>
+      <p className="font-semibold text-white">
+        KrishAIWorks
+      </p>
 
+      <p className="mt-1 text-xs text-zinc-600">
+        AI Solutions That Work
+      </p>
     </div>
+
+  </div>
+
+  <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
 
     <a
       href="https://instagram.com/KrishAIWorks"
@@ -610,11 +613,27 @@ export default function Home() {
       Instagram · @KrishAIWorks
     </a>
 
-    <p className="text-xs text-zinc-700">
-      © {new Date().getFullYear()} KrishAIWorks
-    </p>
+    <a
+      href="https://krishaiworks.com/privacy-policy"
+      className="text-sm text-zinc-500 transition hover:text-lime-400"
+    >
+      Privacy Policy
+    </a>
+
+    <a
+      href="https://krishaiworks.com/terms-and-conditions"
+      className="text-sm text-zinc-500 transition hover:text-lime-400"
+    >
+      Terms & Conditions
+    </a>
 
   </div>
+
+  <p className="text-xs text-zinc-700">
+    © {new Date().getFullYear()} KrishAIWorks
+  </p>
+
+</div>
 
 </footer>
     </main>
